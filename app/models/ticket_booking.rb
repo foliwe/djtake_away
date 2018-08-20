@@ -1,4 +1,5 @@
 class TicketBooking < ApplicationRecord
-  belongs_to :user
-  belongs_to :event
+  belongs_to :ticket
+  has_one :event, through: :ticket
+  has_one :user, through: :ticket
 end
